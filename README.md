@@ -2,7 +2,7 @@
 
 This project is a full-stack web application designed to help users track, manage, and understand their financial activities. It is packaged as a single, self-contained Google Colab notebook that sets up its own backend server, database, and provides client-side code for interacting with all features.
 
-## ✨ Features
+## Features
 
 The application implements all core requirements from the project assignment, along with several bonus features to enhance functionality and robustness.
 
@@ -22,7 +22,7 @@ The application implements all core requirements from the project assignment, al
 - **Daily Expense Trend:** A bar chart visualizing the total amount spent each day.
 - **Income vs. Expense:** A summary bar chart comparing total income against total expenses for a clear financial overview.
 
-## 💻 Technology Stack
+## Technology Stack
 
 - **Backend:** Flask, Gunicorn
 - **Database:** SQLAlchemy (with SQLite)
@@ -32,7 +32,7 @@ The application implements all core requirements from the project assignment, al
 - **Data Handling & Plotting:** Pandas, Matplotlib
 - **Deployment (for Colab):** `pyngrok` for exposing the local server
 
-## 🚀 Setup and Usage Instructions
+## Setup and Usage Instructions
 
 This notebook is designed to run entirely within the Google Colab environment.
 
@@ -59,22 +59,29 @@ This notebook is designed to run entirely within the Google Colab environment.
     - It will then start the Flask server and create a public URL using ngrok.
     - The subsequent cells in "Step 5" allow you to interact with all API features, from registering a user to generating graphs.
 
-## 📁 Project Structure
+## Project Structure
 
 The notebook programmatically creates the following file structure within the Colab environment:
-├── personal_finance_assistant.ipynb
+.
 ├── backend/
 │   ├── app.py          # Main Flask application with all API endpoints
 │   ├── models.py       # SQLAlchemy database models (User, Transaction)
 │   ├── database.py     # SQLAlchemy database instance setup
 │   └── ocr.py          # Logic for OCR and PDF table extraction
+│
 ├── templates/
 │   └── index.html      # Simple homepage for the API
+│
 ├── static/
-│   └── styles.css
-└── test_data/          # Contains sample files generated for testing uploads
+│   └── styles.css       # Basic CSS for the homepage
+│
+├── test_data/
+│   ├── sample_receipt.png  # Generated sample image for OCR testing
+│   └── sample_statement.pdf # Generated sample PDF for table extraction
+│
+└── personal_finance_assistant.ipynb  # The main Colab notebook
 
-## 🔌 API Endpoints
+## API Endpoints
 
 The backend provides the following RESTful API endpoints:
 
