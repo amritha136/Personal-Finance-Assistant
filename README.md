@@ -62,24 +62,17 @@ This notebook is designed to run entirely within the Google Colab environment.
 ## Project Structure
 
 The notebook programmatically creates the following file structure within the Colab environment:
-.
-├── backend/
-│   ├── app.py          # Main Flask application with all API endpoints
-│   ├── models.py       # SQLAlchemy database models (User, Transaction)
-│   ├── database.py     # SQLAlchemy database instance setup
-│   └── ocr.py          # Logic for OCR and PDF table extraction
-│
-├── templates/
-│   └── index.html      # Simple homepage for the API
-│
-├── static/
-│   └── styles.css       # Basic CSS for the homepage
-│
-├── test_data/
-│   ├── sample_receipt.png  # Generated sample image for OCR testing
-│   └── sample_statement.pdf # Generated sample PDF for table extraction
-│
-└── personal_finance_assistant.ipynb  # The main Colab notebook
+- personal_finance_assistant.ipynb: The main Google Colab notebook that contains all the code, instructions, and client-side logic to run the entire project.
+- backend/: This directory contains all the server-side code for the Flask application.
+- app.py: The core of the backend. It initializes the Flask app and defines all API routes (e.g., /login, /transactions).
+- models.py: Defines the database schema using SQLAlchemy models (User and Transaction).
+- database.py: Sets up the SQLAlchemy database instance to be used across the application.
+- ocr.py: Contains the business logic for processing uploaded files, including text extraction with Tesseract OCR and table parsing with Tabula.
+- templates/: Holds the HTML templates served by Flask.
+- index.html: A simple homepage for the API to confirm the server is running.
+- static/: Contains static assets like stylesheets.
+- styles.css: Basic CSS for the index.html page.
+- test_data/: This folder is created by the notebook to store programmatically generated sample files for testing the upload features.
 
 ## API Endpoints
 
